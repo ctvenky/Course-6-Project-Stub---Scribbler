@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ScriBBler</title>
+  <link rel="stylesheet" type="text/css" href="styles/Index.css">
+  <script src="Scripts/index.js"></script>
+  <link rel="all-posts-btn" type="text/css" href="postslist.html">
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">ScriBBler</h1>
+    <h2 class="sub-heading">Explore, Imagine, Create</h2>
+    <div class="buttons">
+      <button class="sign-up-btn" onclick="openModal('signup')">Sign Up</button>
+      <button class="sign-in-btn" onclick="openModal('signin')">Sign In</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="buttons-segment">
+      <button class="all-posts-btn">
+        <a href="postslist.html">All Posts</a>
+      </button>
+      <button class="create-post-btn" onclick="openModal('createpost')">Create Post</button>
+    </div>
+  </div>
+
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('signup')">&times;</span>
+      <h2 class="modal-title">Get Started</h2>
+      <form>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" id="username" placeholder="Enter your username">
+        <input type="password" id="password" placeholder="Enter your password">
+        <input type="password" id="confirm-password" placeholder="Re-enter your password">
+        <button class="signup-modal-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="signinModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('signin')">&times;</span>
+      <h2 class="modal-title">Welcome Back!</h2>
+      <form>
+        <input type="text" id="signin-username" placeholder="Enter your username">
+        <input type="password" id="signin-password" placeholder="Enter your password">
+        <button class="signin-modal-btn">Sign In</button>
+      </form>
+      <p>Not a member? <a href="#" onclick="switchModal('signin', 'signup')">Sign Up</a></p>
+    </div>
+  </div>
+
+  <div id="createpostModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('createpost')">&times;</span>
+      <h2 class="modal-title">Pen Your Post</h2>
+      <form>
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" placeholder="Enter title of your post">
+        <label for="post-contents">Contents</label>
+        <textarea id="post-contents" placeholder="Enter the contents of your post"></textarea>
+        <button class="createpost-modal-btn">Create</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

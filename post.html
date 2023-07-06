@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post</title>
+  <link rel="stylesheet" type="text/css" href="styles/post.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <!-- Header code goes here -->
+    <div class="header">
+      <h1 class="title">ScriBBler</h1>
+      <h2 class="sub-heading">Explore, Imagine, Create</h2>
+      <div class="buttons">
+        <button class="sign-up-btn" onclick="openModal('signup')">Sign Up</button>
+        <button class="sign-in-btn" onclick="openModal('signin')">Sign In</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-content">
+    <h2 class="post-title" contenteditable="false">Post Title</h2>
+    <p class="post-author">Author Name</p>
+    <button id="editBtn" class="edit-button" onclick="toggleEditMode()">Edit <i class="fas fa-edit"></i></button>
+    <p class="post-text" contenteditable="false">Post Text</p>
+    <button id="likeBtn" class="like-button" onclick="toggleLike()">Like <i class="fas fa-thumbs-up"></i></button>
+    <p id="likeCount" class="like-count">0 people like this!</p>
+    <input id="commentInput" class="comment-input" type="text" placeholder="Leave a comment...">
+    <button id="commentBtn" class="comment-button" onclick="addComment()">Comment</button>
+    <div id="commentsSection" class="comments-section">
+      <h3>All Comments</h3>
+      <!-- Comment items will be dynamically added here -->
+    </div>
+  </div>
+
+  <script src="post.js"></script>
+</body>
+</html>
